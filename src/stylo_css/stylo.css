@@ -389,3 +389,233 @@ footer {
     color: #333333;
 }
 
+/* =========================================
+   PÁGINA DE CADASTRO (REGISTO)
+========================================= */
+
+/* Fundo da página e centralização do cartão */
+.cadastro-master {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; /* Permite que fique centrado no ecrã */
+  padding: 20px;
+}
+
+/* O cartão branco inspirado na interface que partilhou */
+.cadastro-card {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 440px; /* Largura ideal para formulários de registo */
+  border-radius: 20px; /* Cantos arredondados e suaves */
+  padding: 40px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04); /* Sombra elegante */
+  border: 1px solid #f0f0f0;
+  text-align: center;
+}
+
+.cadastro-card h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.cadastro-card p {
+  color: #8e959f;
+  font-size: 14px;
+  margin-bottom: 32px;
+}
+
+/* Estrutura flexível para alinhar os campos */
+.cadastro-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espaço entre cada campo */
+  text-align: left;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Estilo das etiquetas (Labels) */
+.input-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #4a4a4a;
+  margin-left: 4px;
+}
+
+/* Estilo dos inputs - semelhante à Home, mas adaptado para formulários */
+.input-group input {
+  width: 100%;
+  background-color: #f7f9fa; /* Fundo cinzento muito claro */
+  border: 1px solid transparent;
+  border-radius: 16px; 
+  padding: 14px 20px;
+  font-size: 15px;
+  color: #1a1a1a;
+  outline: none;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.input-group input::placeholder {
+  color: #8e959f;
+  font-weight: 500;
+}
+
+/* Efeito quando o utilizador clica para escrever (Focus) */
+.input-group input:focus {
+  background-color: #ffffff;
+  border: 1px solid #e1e4e8;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.03); /* Anel de foco subtil */
+}
+
+/* Botão principal de registo (mesmo estilo da Home) */
+.btn-cadastrar {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border: none;
+  border-radius: 30px; /* Formato de pílula */
+  padding: 16px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  margin-top: 10px; /* Afasta o botão dos inputs */
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-cadastrar:hover {
+  background-color: #333333;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-cadastrar:active {
+  transform: translateY(1px);
+  box-shadow: none;
+}
+
+/* =========================================
+   PÁGINA DE UTILIZADOR (PERFIL)
+========================================= */
+
+/* Estrutura principal que coloca as duas colunas lado a lado */
+.usuario-container {
+  display: flex;
+  gap: 24px;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+  align-items: flex-start; /* Evita que a barra lateral estique a altura inteira */
+}
+
+/* --- Cartão da Esquerda (Sidebar) --- */
+.usuario-sidebar {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 40px 20px;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+  border: 1px solid #f0f0f0;
+}
+
+.usuario-avatar {
+  width: 120px;
+  height: 120px;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+  margin-bottom: 24px;
+}
+
+.usuario-nome {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 12px 0;
+}
+
+.usuario-info {
+  font-size: 12px;
+  color: #1a1a1a;
+  margin: 0 0 24px 0;
+}
+
+.btn-editar {
+  background-color: #8e8e8e; /* Botão cinzento escuro conforme a imagem */
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.btn-editar:hover {
+  opacity: 0.8;
+}
+
+/* --- Cartão da Direita (Conteúdo) --- */
+.usuario-conteudo {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 40px;
+  flex: 1; /* Faz com que este lado ocupe todo o espaço restante */
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+  border: 1px solid #f0f0f0;
+}
+
+.conteudo-titulo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 32px 0;
+}
+
+/* Lista de Atividades */
+.lista-atividades {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Fundo cinzento claro arredondado para cada atividade */
+.atividade-item {
+  background-color: #f7f7f7; 
+  border-radius: 12px;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 24px;
+}
+
+.atividade-nome {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333333;
+  width: 140px; /* Mantém as bolinhas alinhadas mesmo que o texto varie */
+}
+
+/* Grupo de bolinhas cinzentas */
+.atividade-bolinhas {
+  display: flex;
+  gap: 12px;
+}
+
+.bolinha {
+  width: 24px;
+  height: 24px;
+  background-color: #dbdbdb;
+  border-radius: 50%;
+}

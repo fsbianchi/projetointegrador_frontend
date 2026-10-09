@@ -1,36 +1,51 @@
-    import React from "react"
-    import { useState } from "react"
+import { useState } from 'react';
+import '../../stylo_css/stylo.css';
 
-    function Login () {
+function Login() {
+    const [email, setEmail] = useState('');
+    const [senha, setSenha] = useState('');
 
-        // Ts
-        const [nome, setNome] = useState('');
-        const [endereco, setEndereco] = useState('');
+    const handleLogin = (e: React.FormEvent) => {
+        e.preventDefault(); 
+        console.log("Dados de acesso:", { email, senha });
+        alert("Sessão iniciada com sucesso!\n(Simulação Front-end)");
+    };
 
-        function handleChangeNome (evento: React.ChangeEvent<HTMLInputElement>){
-            setNome(evento.target.value)
-        }
+    return (
+        <div className="login-master">
+            <div className="login-card">
+                <h1>Iniciar Sessão</h1>
+                <p>Bem-vindo de volta à plataforma.</p>
 
-        const [senha ,setSenha] = useState('');
-        function handleChangeSenha (evento: React.ChangeEvent<HTMLInputElement>){
-            setSenha(evento.target.value)
-        }
+                <form className="login-form" onSubmit={handleLogin}>
+                    <div className="input-group">
+                        <label>Email</label>
+                        <input 
+                            type="email" 
+                            placeholder="O seu endereço de email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            required
+                        />
+                    </div>
 
-        return(
-            <div>
-                <h1>CADASTRO DE USUARIO</h1>
-                <label>Nome:</label>
-                <br />
-                <input type="text" placeholder="Insira o nome" onChange={handleChangeNome}/>
+                    <div className="input-group">
+                        <label>Palavra-passe</label>
+                        <input 
+                            type="password" 
+                            placeholder="A sua palavra-passe secreta"
+                            value={senha}
+                            onChange={(e) => setSenha(e.target.value)}
+                            required
+                        />
+                    </div>
 
-                <br />
-                <label>Senha:</label>
-                <br />
-                <input type="number" placeholder="Insira a senha" onChange={handleChangeSenha}/>
+                    <button type="submit" className="btn-entrar">ENTRAR</button>
+                </form>
             </div>
-        )
+        </div>
+    );
+}
 
-    }
+export default Login;
 
-
-    export default Login;

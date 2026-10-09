@@ -2,7 +2,7 @@ import './App.css';
 import { Routes, Route } from 'react-router-dom';
 
 import Header from './componentes/Header';
-import NotFound from './pagina/Notfound';
+import NotFound from './pagina/NotFound';
 import Home from './pagina/Home';
 import Login from './pagina/Login';
 import Cadastro from './pagina/Cadastro';

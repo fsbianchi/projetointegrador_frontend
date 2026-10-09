@@ -971,3 +971,62 @@ footer {
 .btn-nav-cadastro:hover {
   opacity: 0.8;
 }
+
+
+
+/* =========================================
+   PÁGINA NOT FOUND (404)
+========================================= */
+.notfound-master {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh; /* Ocupa boa parte do ecrã abaixo do Header */
+  padding: 20px;
+}
+
+.notfound-card {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 48px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+  max-width: 500px;
+  width: 100%;
+}
+
+.notfound-card h1 {
+  font-size: 80px;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 0;
+  line-height: 1;
+}
+
+.notfound-card h2 {
+  font-size: 24px;
+  color: #333333;
+  margin: 16px 0 8px 0;
+}
+
+.notfound-card p {
+  color: #666666;
+  font-size: 16px;
+  margin-bottom: 32px;
+}
+
+.btn-voltar-home {
+  display: inline-block;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: opacity 0.2s ease;
+}
+
+.btn-voltar-home:hover {
+  opacity: 0.8;
+}

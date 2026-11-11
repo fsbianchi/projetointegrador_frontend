@@ -46,3 +46,67 @@ function Parceiros() {
 }
 
 export default Parceiros;
+
+
+
+
+
+
+
+
+
+import '../../stylo_css/stylo.css';
+
+function Parceiros() {
+    // Array com dados fictícios de parceiros/patrocinadores
+    const parceiros = [
+        { id: 1, nome: "Arena Bauru", esporte: "Futevôlei" },
+        { id: 2, nome: "Espaço Fit Life", esporte: "Treino funcional" },
+        { id: 3, nome: "Clube da Corrida Bauru", esporte: "Corrida" },
+        { id: 4, nome: "Beach Tennis Center", esporte: "Beach Tennis" },
+        { id: 5, nome: "Academia Flex Power", esporte: "Ioga" },
+        { id: 6, nome: "Quadra Urbana Basquete", esporte: "Basquete" }
+    ];
+
+    return (
+        <div className="parceiros-master">
+            {/* Barra de Pesquisa */}
+            <div className="pesquisa-container">
+                <input 
+                    type="text" 
+                    className="input-pesquisa" 
+                    placeholder="Buscar Fit Friend" 
+                />
+            </div>
+
+            {/* Filtros de Categorias */}
+            <div className="filtros-scroll">
+                <button className="btn-filtro">Beach Tennis</button>
+                <button className="btn-filtro">Corrida</button>
+                <button className="btn-filtro">Futebol</button>
+                <button className="btn-filtro">Futevôlei</button>
+                <button className="btn-filtro">Natação</button>
+                <button className="btn-filtro">Tênis</button>
+                <button className="btn-filtro">Basquete</button>
+                <button className="btn-filtro">Frescobol</button>
+                <button className="btn-filtro">Treino funcional</button>
+                <button className="btn-filtro">Ioga</button>
+            </div>
+
+            {/* Grelha de Cartões */}
+            <div className="grid-parceiros">
+                {parceiros.map((parceiro) => (
+                    <div className="cartao-parceiro" key={parceiro.id}>
+                        <div className="parceiro-info">
+                            <h3>{parceiro.nome}</h3>
+                            <p>Parceiro • {parceiro.esporte}</p>
+                        </div>
+                        <div className="parceiro-avatar"></div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+}
+
+export default Parceiros;
